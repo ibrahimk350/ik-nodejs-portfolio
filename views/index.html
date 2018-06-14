@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Ibrahim Khalid - Personal Portfolio</title>
+    <link rel="stylesheet" id="font-awesome-css" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="/css/normalize.css"/>
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/css/header.css"/>
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link rel="stylesheet" href="/css/mobile.css"/></head>
+<body>
+    <!-- Back to Top -->
+    <a href="#" class="back-to-top" style="display: inline;">
+        <i class="fa fa-arrow-circle-up"><!-- Empty Tag --></i>
+    </a>
+
+    <!-- Header Section -->
+    <section id="header">
+
+        <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+            <button class="navbar-toggler navbar-toggler-right" type="button"
+                    data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <a class="navbar-brand" href="/">
+                <img src="images/logo.png" alt="Ibrahim Khalid - Personal Portfolio" />
+            </a>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#expertise">Expertise</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#resume">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+    </section>
+
+    <!-- Image Slider Section -->
+    <section id="home" class="clearfix">
+
+        <div class="intro_text">
+            <h2 class="imageslider">
+                <span>Ibrahim Khalid</span>
+            </h2>
+            <div class="textslider">
+                <span>Software Developer, Web Developer, and Mobile Developer.
+                <br>&nbsp; #Entreprenuer. #Innovation.</span>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Expertise Section -->
+    <section id="expertise" class="clearfix">
+
+        <div class="container-fluid title_wrapper clearfix">
+            <h3 class="title">Expertise</h3>
+            <h5 class="slogan">Top three categories</h5>
+        </div>
+
+        <div class="container-fluid box_wrapper clearfix">
+
+            <div class="row">
+
+                <div class="box col-md-4 col">
+                    <img src="images/webdev.png" class="circle" alt="Web Development" />
+
+                    <h4>Web Development</h4>
+
+                    <div class="webtext">
+                        Experience since 2013.
+                        <br>
+                        See projects for examples.
+                    </div>
+                </div>
+
+                <div class="box col-md-4 col">
+                    <img src="images/softdev.png" class="circle" alt="Software Development" />
+
+                    <h4>Software Development</h4>
+
+                    <div class="webtext">
+                        Experience since 2013.
+                        <br>See projects for examples.
+                    </div>
+                </div>
+
+                <div class="box col-md-4 col">
+                    <img src="images/mobiledev.png" class="circle" alt="Mobile Development" />
+
+                    <h4>Mobile Development</h4>
+
+                    <div class="webtext">
+                        Experience since 2014.
+                        <br>
+                        See projects for examples.
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="clearfix">
+
+        <div class="thinlayer">
+
+            <div class="container-fluid title_wrapper clearfix">
+                <h3 class="title">Portfolio</h3>
+                <h5 class="slogan">Proud of what I have worked on</h5>
+                <div class="btns clearfix">
+                    <input type="button" value="Web" class="submit web" onClick="ProjectsClicked('web');"/>
+                    <input type="button" value="Software" class="submit software" onClick="ProjectsClicked('software');"/>
+                    <input type="button" value="Mobile" class="submit mobile" onClick="ProjectsClicked('mobile');"/>
+                </div>
+            </div>
+
+            <div class="container-fluid clearfix">
+
+                <div class="listprojects" id="listprojects"></div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Show Project Details -->
+    <section id="project_detail" class="clearfix">
+
+        <div class="thinlayer project_layer">
+
+            <div class="container-fluid title_wrapper clearfix">
+
+                <div class="alert alert-success" role="alert">
+                    <div class="row">
+                        <div class="col-md-11 col_title">
+                            <h4 id="insert_project_title"></h4>
+                        </div>
+                        <div class="col-md-1 col_close">
+                            <span class="close" onclick="ProjectClose();"><strong>X</strong></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-fluid" id="load_project_content"></div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Load Resume -->
+    <section id="resume" class="clearfix">
+
+        <div class="thinlayer">
+
+            <div class="container-fluid title_wrapper clearfix">
+                <h3 class="title">Resume</h3>
+                <h5 class="slogan">Have a look</h5>
+            </div>
+
+            <div class="container-fluid clearfix">
+
+                <object data="/docs/IbrahimK-Resume.pdf" id="resume_obj" type="application/pdf">
+                    alt : <a href="/docs/IbrahimK-Resume.pdf">IbrahimK-Resume.pdf</a>
+                </object>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="clearfix">
+
+        <div class="layer">
+
+            <div class="container-fluid title_wrapper clearfix">
+                <h3 class="title">About Me</h3>
+                <h5 class="slogan">Four years of experience and still going strong</h5>
+            </div>
+
+            <div class="col col-md-12 about_text">
+                <p>
+                        Hello! My name is Ibrahim Khalid. I am a web developer, software
+                        developer, and mobile developer. I started my journey7 years ago with Blogger and Wordpress.
+                        Along the way I have learned the following programming languages:
+                        Java, C#, PHP, Node.js, JavaScript, ASP.NET, PL/SQL, HTML5, and CSS3.
+                        Some of the technologies I have used: Joomla, Drupal, Wordpress, GitHub, BitBucket, Stash, GitLab,
+                        Jira, Confluence, Selenium, Grunt, Docker, Jenkins, SQLPlus, SQL Server Management Studio, MATLAB,
+                        SQL Server 2012, Design Patterns, PHP Composer, GeoIP Database, Responsive Designs, Balsamiq, and Arduino.
+                </p>
+            </div>
+
+            <div class="row edu_exp">
+
+                <div class="col col-md-6">
+
+                        <div class="education">
+                            <p>
+                                <br>
+                                <span><b>Education: </b></span>
+                                <br>
+                                <span>
+                                    <span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                    <b>Software System Design (Co-op)</b>
+                                </span>
+                                <br>
+                                <span>
+                                    <span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                    Bachelor's Degree, Centennial College
+                                </span>
+                                <br>
+                                <br>
+                                <span><b>Resume: </b></span>
+                                <br>
+                                <span>
+                                    <span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                    <b>You may wish to download my resume:</b>
+                                </span>
+                                <br>
+                                <span>
+                                    <span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                    <a href="/docs/IbrahimK-Resume.pdf" target="_blank" class="resume-link">Ibrahim Khalid's Resume</a>
+                                </span>
+                                <br>
+                            </p>
+                        </div>
+
+                </div>
+
+                <div class="col col-md-6">
+
+                    <div class="experience">
+                        <p>
+                            <br>
+                            <span><b>Experience: </b></span>
+                            <br>
+                            <span>
+                                <span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                <b>PHP Developer (4 Months Co-op)</b>
+                            </span>
+                            <br>
+                            <span>
+                                <span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                XE.COM, Newmarket ON
+                            </span>
+                            <br>
+                            <br>
+                            <span>
+                                <span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                <b>Wordpress Developer (Contract)</b>
+                            </span>
+                            <br>
+                            <span>
+                                <span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                Digital-Labyrinth, Toronto ON
+                            </span>
+                            <br>
+                            <br>
+                            <span>
+                                <span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                <b>Co-Founder &amp; PHP Developer</b>
+                            </span>
+                            <br>
+                            <span>
+                                <span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                RamadanMubarak.ca, Toronto ON
+                            </span>
+                            <br>
+                            <br>
+                            <span>
+                                <span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                <b>Volunteer Mentor (Summer Camp)</b>
+                            </span>
+                            <br>
+                            <span>
+                                <span class="indent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                Kids Learning Code, Toronto ON
+                            </span>
+                            <br>
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="clearfix">
+
+        <div class="thinlayer">
+
+            <div class="container-fluid title_wrapper clearfix">
+                <h3 class="title">Contact Me</h3>
+                <h5 class="slogan">Let's talk about the possibilities</h5>
+            </div>
+
+            <div class="row cont">
+
+                <div class="col col-md-6">
+
+                    <div class="form">
+                        <input type="text" name="name" id="name" placeholder="Name" class="input name"/>
+                        <br>
+                        <input type="email" id="email" name="email" placeholder="Email Address" class="input email"/>
+                        <br>
+                        <input type="text" id="subject" name="subject" placeholder="Subject" class="input subject"/>
+                        <br>
+                        <textarea name="content" id="content" placeholder="Message..." class="input message"></textarea>
+                        <br>
+                        <div class="g-recaptcha" id="captcha" data-sitekey="6Lcbpw0UAAAAAPje1mF03qb34G8NYqMqwMt14kF5"></div>
+                        <br>
+                        <input type="submit" value="Submit" id="send_email" class="submit" />
+                        <div id="message"></div>
+                    </div>
+
+                </div>
+
+                <div class="col col-md-6">
+                    <div id="map" style="height:523px;width:100%;"></div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <script src="/js/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZ8TcUsiSVZderCZPYoGkn9bDnAzsMwRo&callback=initMap"></script>
+    <script src="/js/index.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+</body>
+</html>
