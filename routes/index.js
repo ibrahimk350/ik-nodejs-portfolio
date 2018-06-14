@@ -19,7 +19,7 @@ router.get('/send',function(req,res)
         }
     });
 
-    var toEmail = "Ibraheem.k94@hotmail.com";
+    var toEmail = "{InsertEmail}";
     var mailOptions = {
         from: req.query.email, // sender address
         to: toEmail, // list of receivers
